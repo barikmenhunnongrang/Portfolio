@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create | My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="nav" class="nav"></nav>
+
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">Step 1</p>
+      <h1>Tell us about yourself</h1>
+      <p class="lead">Fill in your details and we'll turn them into a beautiful portfolio.</p>
+    </header>
+
+    <form id="portfolioForm" novalidate>
+      <section class="card">
+        <h2>Personal details</h2>
+        <div class="grid">
+          <label class="field">Name
+            <input type="text" id="name" required maxlength="80" placeholder="Your full name" autocomplete="name" />
+          </label>
+          <label class="field">Age
+            <input type="number" id="age" required min="1" max="120" placeholder="e.g. 21" />
+          </label>
+        </div>
+        <label class="field">About me
+          <textarea id="about" rows="4" required maxlength="1500" placeholder="A short introduction about yourself"></textarea>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Contact details</h2>
+        <div class="grid">
+          <label class="field">Phone number
+            <input type="tel" id="phone" required maxlength="20" placeholder="+91 98765 43210" autocomplete="tel" />
+          </label>
+          <label class="field">Email
+            <input type="email" id="email" required maxlength="120" placeholder="you@example.com" autocomplete="email" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Academic details</h2>
+        <div id="academicList"></div>
+        <button type="button" class="btn btn-ghost" id="addAcademic">+ Add another</button>
+      </section>
+
+      <section class="card">
+        <h2>Skills</h2>
+        <label class="field">Separate with commas
+          <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, Node.js" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Projects</h2>
+        <div id="projectList"></div>
+        <button type="button" class="btn btn-ghost" id="addProject">+ Add another</button>
+      </section>
+
+      <section class="card">
+        <h2>Hobbies</h2>
+        <label class="field">Separate with commas
+          <input type="text" id="hobbies" placeholder="Reading, Chess, Photography" />
+        </label>
+      </section>
+
+      <p id="message" class="message" role="alert"></p>
+      <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Create my portfolio</button>
+    </form>
+  </main>
+
+  <footer class="footer">&copy; <span data-year></span> My Portfolio</footer>
+
+  <script src="common.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>
